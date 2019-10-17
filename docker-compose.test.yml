@@ -34,7 +34,7 @@ services:
     restart: on-failure
 
   elasticsearch-test:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.0.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.1
     hostname: "{{.Node.Hostname}}-elasticsearch-test"
     depends_on:
       - db-test

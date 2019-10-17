@@ -37,7 +37,7 @@ services:
     restart: on-failure
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.0.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.1
     depends_on:
       - db
     ports:
