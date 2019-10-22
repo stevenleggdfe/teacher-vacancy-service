@@ -83,7 +83,6 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
   gem 'teaspoon-mocha'
-  gem 'coffee-rails'
   gem 'timecop'
 end
 
