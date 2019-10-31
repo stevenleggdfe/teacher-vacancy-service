@@ -45,7 +45,7 @@ SimpleForm.setup do |config|
     ## Inputs
     b.use :label, class: 'govuk-label'
     b.use :hint, wrap_with: { tag: 'div', class: 'govuk-hint' }
-    b.use :error, wrap_with: { tag: 'div', class: 'govuk-error-message' }
+    b.use :error, wrap_with: { tag: 'div', class: 'govuk-error-messageasdsadasd', html: '<TEST />' }
     b.use :input, class: 'govuk-input'
 
     ## full_messages_for
