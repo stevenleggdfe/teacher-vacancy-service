@@ -15,6 +15,19 @@ en:
       year_invalid: must include a 4-digit year
       email:
         invalid: is not a valid email address
+  activemodel:
+    errors:
+      models:
+        application_details_form:
+          attributes:
+            application_link:
+              blank: *application_link_blank
+            contact_email:
+              blank: *contact_email_blank
+            expires_on:
+              blank: *expires_on_blank
+            publish_on:
+              blank: *expires_on_blank
   activerecord:
     attributes:
       vacancy/expiry_time: Application deadline (time)
