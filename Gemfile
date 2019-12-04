@@ -58,6 +58,7 @@ gem 'google-api-client'
 gem 'browser'
 gem 'mail-notify'
 gem 'array_enum'
+gem 'google-cloud-bigquery'
 
 gem 'sidekiq'
 

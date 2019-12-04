@@ -1,10 +1,15 @@
 require 'google_drive'
+require "google/cloud/bigquery"
+
 module Spreadsheet
   class Writer
     def initialize(spreadsheet_id, worksheet_pos = 0, use_gid = false)
       @spreadsheet_id = spreadsheet_id
       @worksheet_pos = worksheet_pos
       @use_gid = use_gid
+      bigquery = Google::Cloud::Bigquery.new(credentials: Google::Apis::RequestOptions.default.authorization, project_id: "teacher-vacancy-service")
+      dataset = bigquery.dataset "trial_dataset"
+      @table = dataset.create_table "my_table"
     end
 
     def append_rows(rows)
@@ -21,6 +26,7 @@ module Spreadsheet
         worksheet[pos, index + 1] = cell
       end
       worksheet.save if save
+      @table.insert row
     end
 
     def last_row
